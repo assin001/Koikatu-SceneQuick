@@ -1,0 +1,20 @@
+# 构建产物
+out/
+bin/
+obj/
+*.dll
+*.pdb
+*.bak_*
+
+# 本地工具链（Roslyn csc，体积大）
+_tools/
+
+# 反编译参考与原始 KKS 插件（非本项目代码）
+decompiled/
+_kk_asm/
+_ref_decomp/
+KKS_SceneQuick.dll
+
+# 临时文件
+_shot.png
+*.log
