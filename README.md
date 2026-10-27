@@ -11,6 +11,8 @@
 </p>
 
 > **Beta**：主要流程已实测可用，细节仍在打磨。遇到问题请带上 `BepInEx\LogOutput.log` 反馈。
+>
+> **适配范围**：目前仅在 **Koikatsu + Madevil 系插件环境**下测试过，其它整合包或插件组合未验证，兼容性反馈欢迎提 issue。
 
 ---
 
@@ -76,6 +78,7 @@ powershell -File tools\build.ps1 -Deploy
 
 ## 说明
 
+- **目前仅适配 Koikatsu 的 Madevil 系插件环境**（KKAPI / Madevil 整合包那一套），其它整合包或插件组合未做验证
 - 界面用 uGUI 重做，色板与圆角样式与 `KK_SceneBrowser` 保持一致
 - 已挂 XUnity.AutoTranslator 忽略规则，面板文字不会被自动翻译
 - 效果识别基于物件名关键词 + 组件类型，识别不到时用右键改判，一次设置长期有效
@@ -83,6 +86,6 @@ powershell -File tools\build.ps1 -Deploy
 
 ## 已知限制
 
-- 只做了 Koikatsu（`CharaStudio.exe`），KKS 仍需用原 `KKS_SceneQuick`
+- 只在 Koikatsu（`CharaStudio.exe`）+ Madevil 系插件环境实测；KKS 仍需用原 `KKS_SceneQuick`
 - 角色卡列表只读 `UserData\chara\male|female`，不含子文件夹
 - 预设参数快照只覆盖 float / int / bool / Color / Vector2 / Vector3 类型的公开字段
